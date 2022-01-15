@@ -1,0 +1,18 @@
+{% extends 'base.html' %} {% block title %} User Page {% endblock title %} {%
+block content %}
+<h2 class="text-center text-3xl text-red-800">You are logged In</h2>
+<p class="text-cyan-800 text-lg">Name = {{name}}</p>
+<p class="text-cyan-800 text-lg">Email = {{email}}</p>
+<button class="p-2 m-3 bg-slate-800 rounded-lg w-32">
+	<a class="text-white" href="/logout">Logout</a>
+</button>
+<form action="#" method="post">
+	<input
+		type="number"
+		name="phone"
+		placeholder="Enter your number"
+		value="{{phone if phone}}"
+	/>
+	<input class="bg-slate-800 p-2 m-2 text-white" type="submit" value="submit" />
+</form>
+{% endblock content %}`

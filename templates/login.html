@@ -1,0 +1,35 @@
+<!-- prettier-ignore -->
+{% extends 'base.html' %} 
+
+{% block title %} 
+    Login Page 
+{% endblock title %}
+
+{% block content %}
+{% with messages = get_flashed_messages() %}
+   
+   {% if messages %}
+       {% for msg in messages %}
+<p>{{msg}}</p>
+{% endfor %} {% endif %} {% endwith %}
+<form action="#" method="post">
+	<p class="text-lg my-2">Name:</p>
+	<input
+		class="rounded bg-slate-100 hover:ring-1 my-2"
+		type="text"
+		name="nm"
+		required
+	/><br />
+	<input
+		class="rounded bg-slate-100 hover:ring-1"
+		type="email"
+		name="mail"
+	/><br />
+	<input
+		class="rounded-md bg-slate-800 text-white m-2 p-2"
+		type="submit"
+		name="submit"
+		required
+	/>
+</form>
+{% endblock content %}
